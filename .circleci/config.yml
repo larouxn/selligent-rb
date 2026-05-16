@@ -16,7 +16,7 @@ jobs:
       - checkout
       - restore_cache:
           key: gemfile-<< parameters.ruby_version >>-{{ checksum "Gemfile" }}
-      - run: gem install bundler:4.0.7 --no-document
+      - run: gem install bundler --no-document
       - run: bundle install -j3
       - save_cache:
           key: gemfile-<< parameters.ruby_version >>-{{ checksum "Gemfile" }}
@@ -33,7 +33,7 @@ jobs:
       - checkout
       - restore_cache:
           key: gemfile-<< parameters.ruby_version >>-{{ checksum "Gemfile" }}
-      - run: gem install bundler:4.0.7 --no-document
+      - run: gem install bundler --no-document
       - run: bundle install -j3
       - run: bundle check
       - run: bundle exec rubocop
