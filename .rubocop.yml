@@ -1,9 +1,10 @@
 plugins:
   - rubocop-rspec
+  - rubocop-performance
 
 AllCops:
   TargetRubyVersion: 3.2
-  NewCops: disable
+  NewCops: enable
 
 Metrics/BlockLength:
   Exclude:

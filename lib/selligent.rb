@@ -15,8 +15,8 @@ module Selligent
       client.respond_to?(method_name, include_private)
     end
 
-    def method_missing(method_name, *args, &block)
-      return client.send(method_name, *args, &block) if client.respond_to?(method_name)
+    def method_missing(method_name, *, &)
+      return client.send(method_name, *, &) if client.respond_to?(method_name)
 
       super
     end

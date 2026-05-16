@@ -5,20 +5,20 @@ require 'faraday'
 module Selligent
   # Network layer
   module Connection
-    def get(url, options = {}, &block)
-      connection.get url, options, &block
+    def get(url, options = {}, &)
+      connection.get(url, options, &)
     end
 
-    def post(url, options = {}, &block)
-      connection.post url, options, &block
+    def post(url, options = {}, &)
+      connection.post(url, options, &)
     end
 
-    def put(url, options = {}, &block)
-      connection.put url, options, &block
+    def put(url, options = {}, &)
+      connection.put(url, options, &)
     end
 
-    def delete(url, options = {}, &block)
-      connection.delete url, options, &block
+    def delete(url, options = {}, &)
+      connection.delete(url, options, &)
     end
 
     private

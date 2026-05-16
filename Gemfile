@@ -4,12 +4,12 @@ source 'https://rubygems.org'
 
 group :development do
   gem 'rubocop'
+  gem 'rubocop-performance', require: false
   gem 'rubocop-rspec', require: false
   gem 'yard'
 end
 
 group :test do
-  gem 'ostruct'
   gem 'rspec', '~> 3.0'
   gem 'rspec_junit_formatter', '~> 0.3'
   gem 'timecop'

@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'ostruct'
 
 RSpec.describe Selligent::Client::Cumulio do
   include_context 'base_client'
 
   before do
-    allow(client).to receive(:config).and_return(OpenStruct.new(organization: 'my-org'))
+    allow(client).to receive(:config).and_return(double(organization: 'my-org'))
   end
 
   describe '.cumulio_datasets' do
